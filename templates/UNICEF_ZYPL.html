@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UNICEF & ZYPL.CAREER</title>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="Css/css.css"> Подключение CSS-->
+	 <!--Импорт шрифта с Google Fonts
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="all">
+        <!-- Блок с заголовками -->
+        <div class="textology">
+            <h1 align="center">
+                CAREER
+            </h1>
+            <h5 align="center">ZYPL.ai</h5>
+        </div>
+    </div>
+    <form action="{{ url_for('predict')}}" method="POST">
+      
+        <div class="main" align="center">
+            <!-- Главный блок, в котором находятся другие -->
+            <div class="inputs">
+                <div class="input1">
+                    1st child exist ?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                   
+                </div>
+                <select class="form-control", name = 'childexist'>
+                    <option></option>
+                    <option>No 1st child</option>
+                    <option>1st child exists</option>
+                    </select>
+                <div class="input1">
+                    Location type ?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    
+                    
+                </div>
+                <select class="form-control", name = 'Urban'>
+                        
+                    <option></option>    
+                    <option>Urban</option>
+                    <option>Rural</option>
+                    </select>
+                <div class="input1">
+                    Sex of respondent ?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    
+                    
+                </div>
+                <select class="form-control", name ='isFemale'>
+                    <option></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    </select>
+                <div class="input1">
+                    Have you ever been abroad ?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    
+                </div>
+                <select class="form-control", name = 'BeenAbroad'>
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    </select>
+                <div class="input1">
+                    What was the highest level
+                    of your education ?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    
+                </div>
+                <select class="form-control", name ='edlevel'>
+                    <option></option>
+                    <option>General education</option>
+                    <option>VET</option>
+                    <option>Tertury</option>
+                    </select>    
+                <div class="input1">
+                    How would you describe your current health ?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                   
+                </div>    
+                <select class="form-control", name ='healthy'>
+                    <option></option>
+                    <option>Very good</option>
+                    <option>Bad</option>
+                    </select>
+                <div class="input1">
+                    Indicate age
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    
+                </div> 
+                <input type="text" class="input1_buton" name="ageYr" required autofocus> <!-- Блок со строкой ввода ответа-->   
+                <div class="input1">
+                    1st job exist ?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                    
+                </div>    
+                <select class="form-control", name ='fjobexist'>
+                    <option></option>
+                    <option>No 1st job</option>
+                    <option>1st job exists</option>
+                    </select>
+                <div class="input1">
+                    What is your current marital status?
+                    <!-- Блок в котором находятся блоки с вопросом и со строкою ввода ответа -->
+                  
+                </div>    
+                <select class="form-control", name = 'married'>
+                    <option></option>
+                    <option>Single, never married and never cohabitated</option>
+                    <option>Married</option>
+                    </select>
+                
+            </div>
+            <button type="submit" id="button_enter" value="Enter" class="btn btn-primary btn-lg" style="font-size: xx-large; background-color: rgb(86, 86, 223); border-radius: 20px;">Отправить</button>
+      </div>
+      
+    </form>
+    <center><h2 style="color: black">{{ result_text }}</h2></center>
+
+
